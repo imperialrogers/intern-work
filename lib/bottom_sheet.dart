@@ -43,8 +43,8 @@ class MyHomePage extends StatelessWidget {
 
   void openBottomSheet() {
     String? gender = "New"; //no radio button will be selected on initial
-    var chosenValue = "--Select State--";
-    String dropdownValue = '--Select City--';
+    var chosenValue = "UP";
+    String dropdownValue = 'Ayodhya';
 
     Get.bottomSheet(
       Column(
@@ -114,72 +114,83 @@ class MyHomePage extends StatelessWidget {
           ///
 
           ///
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              SizedBox(
-                height: 100,
-                width: 150,
-                // padding: const EdgeInsets.all(30.0),
-                child: DropdownButtonFormField(
-                  decoration: const InputDecoration(
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                          color: Colors.white, width: 0), //<-- SEE HERE
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      //<-- SEE HERE
-                      borderSide: BorderSide.none,
-                    ),
-                  ),
-                  value: chosenValue,
-                  isExpanded: false,
-                  isDense: true,
-                  onChanged: (String? newValue) {},
-                  items: <String>['--Select State--', 'Cat', 'Tiger', 'Lion']
-                      .map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                      value: value,
-                      child: Text(
-                        value,
-                        style: TextStyle(fontSize: 15),
+          Padding(
+            padding: const EdgeInsets.only(top: 20.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SizedBox(
+                  height: 100,
+                  width: 150,
+                  // padding: const EdgeInsets.all(30.0),
+                  child: DropdownButtonFormField(
+                    decoration: const InputDecoration(
+                      labelText: "Select State",
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                            color: Colors.black, width: 1), //<-- SEE HERE
                       ),
-                    );
-                  }).toList(),
-                ),
-              ),
-              SizedBox(
-                height: 100,
-                width: 150,
-                // padding: const EdgeInsets.all(30.0),
-                child: DropdownButtonFormField(
-                  decoration: const InputDecoration(
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                          color: Colors.white, width: 0), //<-- SEE HERE
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 5, horizontal: 20),
+                      enabledBorder: OutlineInputBorder(
+                          //<-- SEE HERE
+                          borderRadius: BorderRadius.all(Radius.circular(20))
+                          // borderSide: BorderSide.none,
+                          ),
                     ),
-                    enabledBorder: OutlineInputBorder(
-                      //<-- SEE HERE
-                      borderSide: BorderSide.none,
-                    ),
+                    value: chosenValue,
+                    isExpanded: false,
+                    isDense: true,
+                    onChanged: (String? newValue) {},
+                    items: <String>['UP', 'Cat', 'Tiger', 'Lion']
+                        .map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(
+                          value,
+                          style: TextStyle(fontSize: 15),
+                        ),
+                      );
+                    }).toList(),
                   ),
-                  value: dropdownValue,
-                  isExpanded: false,
-                  isDense: true,
-                  onChanged: (String? newValue) {},
-                  items: <String>['--Select City--', 'Cat', 'Tiger', 'Lion']
-                      .map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                      value: value,
-                      child: Text(
-                        value,
-                        style: TextStyle(fontSize: 15),
-                      ),
-                    );
-                  }).toList(),
                 ),
-              ),
-            ],
+                SizedBox(
+                  height: 100,
+                  width: 150,
+                  // padding: const EdgeInsets.all(30.0),
+                  child: DropdownButtonFormField(
+                    decoration: const InputDecoration(
+                      labelText: "Select City",
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                            color: Colors.black, width: 1), //<-- SEE HERE
+                      ),
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 5, horizontal: 20),
+                      enabledBorder: OutlineInputBorder(
+                          //<-- SEE HERE
+                          borderRadius: BorderRadius.all(Radius.circular(20))
+                          // borderSide: BorderSide.none,
+                          ),
+                    ),
+                    value: dropdownValue,
+                    isExpanded: false,
+                    isDense: true,
+                    onChanged: (String? newValue) {},
+                    items: <String>['Ayodhya', 'Cat', 'Tiger', 'Lion']
+                        .map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(
+                          value,
+                          style: TextStyle(fontSize: 15),
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

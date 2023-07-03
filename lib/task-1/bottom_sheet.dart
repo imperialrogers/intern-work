@@ -130,8 +130,8 @@ class MyHomePage extends StatelessWidget {
                         borderSide: BorderSide(
                             color: Colors.black, width: 1), //<-- SEE HERE
                       ),
-                      contentPadding: const EdgeInsets.symmetric(
-                          vertical: 5, horizontal: 20),
+                      contentPadding:
+                          EdgeInsets.symmetric(vertical: 5, horizontal: 20),
                       enabledBorder: OutlineInputBorder(
                           //<-- SEE HERE
                           borderRadius: BorderRadius.all(Radius.circular(20))

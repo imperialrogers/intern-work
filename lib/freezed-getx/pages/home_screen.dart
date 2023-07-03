@@ -1,10 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:demo/post_card.dart';
-import 'package:demo/text_screen.dart';
+import 'package:demo/freezed-getx/widgets/post_card.dart';
+import 'package:demo/freezed-getx/pages/text_screen.dart';
 import 'package:flutter/material.dart';
-import 'demo_values.dart';
-import 'post_card.dart';
+import '../widgets/demo_values.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

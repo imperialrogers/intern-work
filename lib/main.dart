@@ -1,5 +1,7 @@
-import 'package:demo/bottom_sheet.dart';
-import 'package:demo/create_post.dart';
+import 'package:demo/freezed-getx/widgets/list.dart';
+import 'package:demo/pages/hashtag_page.dart';
+import 'package:demo/freezed-getx/widgets/product.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -20,7 +22,24 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MyHomePage(),
+      home: Scaffold(
+        body: Center(
+            child: ElevatedButton(
+                onPressed: () async {
+                  // var response =
+                  //     await Dio().get('https://fakestoreapi.com/products');
+                  // List list = response.data;
+                  // List<Product> _products =
+                  //     list.map((e) => Product.fromJson(e)).toList();
+                  // Get.to(
+                  //   ListScreen(
+                  //     plist: _products,
+                  //   ),
+                  // );
+                  Get.to(HashTagPage());
+                },
+                child: Text("Press"))),
+      ),
     );
   }
 }

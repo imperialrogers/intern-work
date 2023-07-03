@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:demo/image_viewer_widget.dart';
+import 'package:demo/task-1/image_viewer_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';

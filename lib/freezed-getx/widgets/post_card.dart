@@ -1,4 +1,4 @@
-import 'package:demo/demo_values.dart';
+import 'package:demo/freezed-getx/widgets/demo_values.dart';
 import 'package:flutter/material.dart';
 
 class PostCard extends StatelessWidget {

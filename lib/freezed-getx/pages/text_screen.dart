@@ -1,4 +1,4 @@
-import 'package:demo/home_screen.dart';
+import 'package:demo/freezed-getx/pages/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class TextScreen extends StatelessWidget {

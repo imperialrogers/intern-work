@@ -1,7 +1,4 @@
-import 'package:demo/freezed-getx/widgets/list.dart';
 import 'package:demo/pages/hashtag_page.dart';
-import 'package:demo/freezed-getx/widgets/product.dart';
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,5 +1,7 @@
 import 'package:demo/freezed-getx/pages/home_screen.dart';
+import 'package:demo/task-1/create_post.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class TextScreen extends StatelessWidget {
   const TextScreen({super.key});
@@ -29,10 +31,11 @@ class TextScreen extends StatelessWidget {
                   child: Icon(Icons.search)),
             ),
             FloatingActionButton(
-              onPressed: null,
+              onPressed: () {
+                Get.to(CreatePostScreen());
+              },
               tooltip: 'Increment',
               child: Icon(Icons.add),
-              foregroundColor: Colors.blue,
             ),
             Expanded(
               child: GestureDetector(

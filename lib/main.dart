@@ -1,4 +1,6 @@
+import 'package:demo/freezed-getx/pages/home_screen.dart';
 import 'package:demo/pages/hashtag_page.dart';
+import 'package:demo/reels-scroller/reels_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -33,7 +35,8 @@ class MyApp extends StatelessWidget {
                   //     plist: _products,
                   //   ),
                   // );
-                  Get.to(HashTagPage());
+                  // Get.to(ReelsScreen());
+                  Get.to(HomeScreen());
                 },
                 child: Text("Press"))),
       ),

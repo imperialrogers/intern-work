@@ -2,7 +2,10 @@
 
 import 'package:demo/freezed-getx/widgets/post_card.dart';
 import 'package:demo/freezed-getx/pages/text_screen.dart';
+import 'package:demo/reels-scroller/reels_page.dart';
+import 'package:demo/task-1/create_post.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../widgets/demo_values.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -18,6 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Drawer(
       child: Scaffold(
         appBar: AppBar(
+          forceMaterialTransparency: true,
           title: const Text("Janta24"),
           centerTitle: true,
           actions: [
@@ -160,15 +164,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Icon(Icons.search)),
               ),
               FloatingActionButton(
-                onPressed: null,
+                onPressed: () {
+                  Get.to(CreatePostScreen());
+                },
                 tooltip: 'Increment',
                 child: Icon(Icons.add),
               ),
               Expanded(
                 child: GestureDetector(
                     onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => TextScreen()));
+                      Get.to(ReelsScreen());
                     },
                     child: Icon(Icons.video_call_outlined)),
               ),
